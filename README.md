@@ -19,7 +19,7 @@ To run this project, you will need a ROS2 and Gazebo installation. __Currently, 
 	```bash
 	mkdir sim-ws && cd sim-ws
 	mkdir src && cd src
-	git clone https://github.com/S1ink/csm_gz_sim
+	git clone https://github.com/Cardinal-Space-Mining/csm_gz_sim
 	```
 5. Make sure all required packages are installed using rosdep:
 	```bash
@@ -37,6 +37,6 @@ To run this project, you will need a ROS2 and Gazebo installation. __Currently, 
 
 #### ROS2 Project Integration
 
-* TODO -- See [this repo](https://github.com/Gazebo-Test-Sim) for example usage.
+* TODO -- See [this repo](https://github.com/CSM-Lance-Dev) for example usage.
 
 __*Last updated: 9/14/24*__
