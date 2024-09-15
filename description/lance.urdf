@@ -26,13 +26,13 @@
 
 		<visual name = 'frame_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-frame.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame.dae" />
 			</geometry>
 		</visual>
 
 		<collision name = 'frame_collision'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-frame-collision.stl" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame-collision.stl" />
 			</geometry>
 		</collision>
 	</link>
@@ -60,13 +60,13 @@
 
 		<visual name = 'left_track_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-left-track.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-left-track.dae" />
 			</geometry>
 		</visual>
 
 		<collision name = 'left_track_collision'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-left-track-collision.stl" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-left-track-collision.stl" />
 			</geometry>
 		</collision>
 	</link>
@@ -93,13 +93,13 @@
 
 		<visual name = 'right_track_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-right-track.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-right-track.dae" />
 			</geometry>
 		</visual>
 
 		<collision name = 'right_track_collision'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-right-track-collision.stl" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-right-track-collision.stl" />
 			</geometry>
 		</collision>
 	</link>
@@ -140,18 +140,18 @@
 
 		<visual name = 'hopper_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-hopper.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-hopper.dae" />
 			</geometry>
 		</visual>
 		<visual name = 'collection_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-collection.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-collection.dae" />
 			</geometry>
 		</visual>
 
 		<collision name = 'collection_collision'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-upper-collision.stl" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-upper-collision.stl" />
 			</geometry>
 		</collision>
 	</link>
@@ -182,7 +182,7 @@
 
 		<visual name = 'lidar_visual'>
 			<geometry>
-				<mesh filename = "file://$(find lance_sim)/description/lance/meshes/lance-2024-multiscan.dae" />
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-multiscan.dae" />
 			</geometry>
 		</visual>
 
