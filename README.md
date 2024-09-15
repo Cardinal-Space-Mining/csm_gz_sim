@@ -37,6 +37,6 @@ To run this project, you will need a ROS2 and Gazebo installation. __Currently, 
 
 #### ROS2 Project Integration
 
-* TODO -- See [this repo](https://github.com/CSM-Lance-Dev) for example usage.
+* TODO -- See [this repo](https://github.com/S1ink/CSM-Lance-Dev) for example usage.
 
 __*Last updated: 9/14/24*__
