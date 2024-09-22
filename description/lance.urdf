@@ -163,7 +163,7 @@
 		<child link = "lidar_link" />
 		<origin
 			xyz = "0.64957717 0 0.42478867"
-			rpy = "3.1415926 0.3490659 0"
+			rpy = "2.836255 -0.171851 -2.067879"
 		/>
 	</joint>
 	<link name = 'lidar_link'>

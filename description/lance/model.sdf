@@ -210,7 +210,8 @@
 			<child>lidar_link</child>
 		</joint>
 		<link name = 'lidar_link'>
-			<pose relative_to = 'frame_link'>0.64957717 0 0.42478867 3.1415926 0.3490659 0</pose>
+			<pose relative_to = 'frame_link'>0.64957717 0 0.42478867 2.836255 -0.171851 -2.067879</pose>
+			<!-- <pose relative_to = 'frame_link' rotation_format = 'quat_xyzw'>0.64957717 0 0.42478867 0.4924039 -0.8528685 -0.0868241 0.1503837</pose> -->
 
 			<inertial>
 				<pose>1.97e-5 -0.001 -0.009 0 0 0</pose>
