@@ -196,6 +196,15 @@
 			</geometry>
 		</collision>
 	</link>
+	<joint name = 'lidar_joint_inv_rotated' type = 'fixed'>
+		<parent link = "lidar_link" />
+		<child link = "lidar_link_inv_rotated" />
+		<origin
+			xyz = "0 0 0"
+			rpy = "0 0 2.09439510239"
+		/>
+	</joint>
+	<link name = 'lidar_link_inv_rotated'></link>
 
 <!-- Forward Camera -->
 	<joint name = 'fwd_cam_joint' type = 'fixed'>
