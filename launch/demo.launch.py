@@ -46,7 +46,7 @@ def generate_launch_description():
     launch_rviz = Node(
         package = 'rviz2',
         executable = 'rviz2',
-        arguements = ['-d', os.path.join( pkg_path, 'config', 'sim_demo.rviz' )],
+        arguments = ['-d', os.path.join( pkg_path, 'config', 'sim_demo.rviz' )],
         condition = IfCondition( LaunchConfiguration('rviz', default = 'true') ),
         parameters = [{'use_sim_time' : True}]
     )
