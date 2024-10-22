@@ -47,16 +47,30 @@ def generate_launch_description():
         package = 'rviz2',
         executable = 'rviz2',
         arguments = ['-d', os.path.join( pkg_path, 'config', 'sim_demo.rviz' )],
-        condition = IfCondition( LaunchConfiguration('rviz', default = 'true') ),
+        condition = IfCondition( LaunchConfiguration('rviz', default = 'false') ),
         parameters = [{'use_sim_time' : True}]
+    )
+    # foxglove server if enabled
+    launch_foxglove = Node(
+        name = 'foxglove',
+        package = 'foxglove_bridge',
+        executable = 'foxglove_bridge',
+        output = 'screen',
+        parameters = [
+            os.path.join(pkg_path, 'config', 'foxglove_bridge.yaml'),
+            {'use_sim_time': True}
+        ],
+        condition = IfCondition( LaunchConfiguration('foxglove', default='true') ),
     )
 
     return LaunchDescription([
         DeclareLaunchArgument('gz_gui', default_value = 'false'),
         DeclareLaunchArgument('gz_map', default_value = 'arena'),
-        DeclareLaunchArgument('rivz', default_value = 'true'),
+        DeclareLaunchArgument('rivz', default_value = 'false'),
+        DeclareLaunchArgument('foxglove', default_value = 'true'),
         launch_gazebo,
         launch_state_pub,
         launch_xbox_ctrl,
-        launch_rviz
+        launch_rviz,
+        launch_foxglove
     ])

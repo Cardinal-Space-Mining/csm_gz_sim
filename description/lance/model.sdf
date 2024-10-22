@@ -2,7 +2,16 @@
 <sdf version="1.10">
 	<model name='lance'>
 
-		<link name = 'base_link'></link>
+		<link name = 'base_link'>
+			<visual name = 'body_tags'>
+				<geometry>
+					<mesh>
+						<uri>./meshes/lance-2024-body-tags.dae</uri>
+						<scale>1 1 1</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
 
 	<!-- FRAME -->
 		<joint name = 'frame_joint' type = 'fixed'>
@@ -354,7 +363,7 @@
 		<link name = 'fwd_cam_link'>
 			<pose relative_to = 'frame_link'>0.72468246 0 0.51148737 -1.74532925199 0 -1.57079632679</pose>
 
-			<sensor name='fwd_cam' type='camera'>
+			<!-- <sensor name='fwd_cam' type='camera'>
 				<pose>0 0 0 1.57079632679 -1.57079632679 0</pose>
 				<topic>/model/lance/fwd_cam/image</topic>
 				<gz_frame_id>fwd_cam_link</gz_frame_id>
@@ -373,7 +382,7 @@
 					<clip>
 						<near>0.08</near>
 						<far>100.0</far>
-					</clip>
+					</clip> -->
 					<!-- <distortion>
 						<k1>0.2334526</k1>
 						<k2>-0.87719634</k2>
@@ -382,7 +391,7 @@
 						<p2>0.97017557</p2>
 						<center>0.5 0.5</center>
 					</distortion> -->
-					<lens>
+					<!-- <lens>
 						<type>gnomonical</type>
 						<scale_to_hfov>false</scale_to_hfov>
 						<cutoff_angle>1.5707</cutoff_angle>
@@ -391,17 +400,17 @@
 							<fx>1099.01916</fx>
 							<fy>1095.23244</fy>
 							<cx>621.291826</cx>
-							<cy>359.862988</cy>
+							<cy>359.862988</cy> -->
 							<!-- <fx>525.08331471</fx>
 							<fy>524.34561131</fy>
 							<cx>321.73028149</cx>
 							<cy>244.12181265</cy> -->
-							<s>0</s>
-						</intrinsics>
+							<!-- <s>0</s>
+						</intrinsics> -->
 						<!-- <projection></projection> -->
-					</lens>
+					<!-- </lens>
 				</camera>
-			</sensor>
+			</sensor> -->
 		</link>
 	<!-- Right Camera -->
 		<joint name = 'rght_cam_joint' type = 'fixed'>
@@ -411,7 +420,7 @@
 		<link name = 'rght_cam_link'>
 			<pose relative_to = 'frame_link'>-0.06416965 -0.28448800 0.22203322 -1.57079632679 0 3.1415926</pose>
 
-			<sensor name='rght_cam' type='camera'>
+			<!-- <sensor name='rght_cam' type='camera'>
 				<pose>0 0 0 1.57079632679 -1.57079632679 0</pose>
 				<topic>/model/lance/rght_cam/image</topic>
 				<gz_frame_id>rght_cam_link</gz_frame_id>
@@ -430,7 +439,7 @@
 					<clip>
 						<near>0.08</near>
 						<far>100.0</far>
-					</clip>
+					</clip> -->
 					<!-- <distortion>
 						<k1>0.23879134</k1>
 						<k2>-0.94403776</k2>
@@ -439,7 +448,7 @@
 						<p2>1.14485391</p2>
 						<center>0.5 0.5</center>
 					</distortion> -->
-					<lens>
+					<!-- <lens>
 						<type>gnomonical</type>
 						<scale_to_hfov>false</scale_to_hfov>
 						<cutoff_angle>1.5707</cutoff_angle>
@@ -448,17 +457,17 @@
 							<fx>1099.01916</fx>
 							<fy>1095.23244</fy>
 							<cx>621.291826</cx>
-							<cy>359.862988</cy>
+							<cy>359.862988</cy> -->
 							<!-- <fx>521.06512431</fx>
 							<fy>521.28236255</fy>
 							<cx>320.42556535</cx>
 							<cy>242.55116183</cy> -->
-							<s>0</s>
-						</intrinsics>
+							<!-- <s>0</s>
+						</intrinsics> -->
 						<!-- <projection></projection> -->
-					</lens>
+					<!-- </lens>
 				</camera>
-			</sensor>
+			</sensor> -->
 		</link>
 	<!-- Forward Camera -->
 		<joint name = 'left_cam_joint' type = 'fixed'>
@@ -468,7 +477,7 @@
 		<link name = 'left_cam_link'>
 			<pose relative_to = 'frame_link'>-0.06416965 0.28448800 0.22203322 -1.57079632679 0 0</pose>
 
-			<sensor name='left_cam' type='camera'>
+			<!-- <sensor name='left_cam' type='camera'>
 				<pose>0 0 0 1.57079632679 -1.57079632679 0</pose>
 				<topic>/model/lance/left_cam/image</topic>
 				<gz_frame_id>left_cam_link</gz_frame_id>
@@ -487,7 +496,7 @@
 					<clip>
 						<near>0.08</near>
 						<far>100.0</far>
-					</clip>
+					</clip> -->
 					<!-- <distortion>
 						<k1>0.19903941</k1>
 						<k2>-0.74796342</k2>
@@ -496,7 +505,7 @@
 						<p2>0.87606197</p2>
 						<center>0.5 0.5</center>
 					</distortion> -->
-					<lens>
+					<!-- <lens>
 						<type>gnomonical</type>
 						<scale_to_hfov>false</scale_to_hfov>
 						<cutoff_angle>1.5707</cutoff_angle>
@@ -505,17 +514,17 @@
 							<fx>1099.01916</fx>
 							<fy>1095.23244</fy>
 							<cx>621.291826</cx>
-							<cy>359.862988</cy>
+							<cy>359.862988</cy> -->
 							<!-- <fx>502.77264231</fx>
 							<fy>502.78152803</fy>
 							<cx>322.89582315</cx>
 							<cy>241.45546177</cy> -->
-							<s>0</s>
-						</intrinsics>
+							<!-- <s>0</s>
+						</intrinsics> -->
 						<!-- <projection></projection> -->
-					</lens>
+					<!-- </lens>
 				</camera>
-			</sensor>
+			</sensor> -->
 		</link>
 
 	<!-- PLUGINS -->

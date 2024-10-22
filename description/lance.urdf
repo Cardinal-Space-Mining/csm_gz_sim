@@ -2,7 +2,13 @@
 <robot name="lance" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <!-- ^^ xacro is needed to resolve the mesh filepaths -->
 
-	<link name = "base_link"></link>
+	<link name = "base_link">
+		<visual>
+			<geometry>
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-body-tags.dae" />
+			</geometry>
+		</visual>
+	</link>
 
 <!-- FRAME -->
 	<joint name = "frame_joint" type = "fixed">

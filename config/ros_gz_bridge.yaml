@@ -54,18 +54,23 @@
   publisher_queue: 1
 
 # gz topic published by Sensors plugin (Camera)
-- ros_topic_name: "/model/lance/fwd_cam/camera_info"
-  gz_topic_name: "/model/lance/fwd_cam/camera_info"
-  ros_type_name: "sensor_msgs/msg/CameraInfo"
-  gz_type_name: "gz.msgs.CameraInfo"
-  direction: GZ_TO_ROS
-- ros_topic_name: "/model/lance/rght_cam/camera_info"
-  gz_topic_name: "/model/lance/rght_cam/camera_info"
-  ros_type_name: "sensor_msgs/msg/CameraInfo"
-  gz_type_name: "gz.msgs.CameraInfo"
-  direction: GZ_TO_ROS
-- ros_topic_name: "/model/lance/left_cam/camera_info"
-  gz_topic_name: "/model/lance/left_cam/camera_info"
+# - ros_topic_name: "/model/lance/fwd_cam/camera_info"
+#   gz_topic_name: "/model/lance/fwd_cam/camera_info"
+#   ros_type_name: "sensor_msgs/msg/CameraInfo"
+#   gz_type_name: "gz.msgs.CameraInfo"
+#   direction: GZ_TO_ROS
+# - ros_topic_name: "/model/lance/rght_cam/camera_info"
+#   gz_topic_name: "/model/lance/rght_cam/camera_info"
+#   ros_type_name: "sensor_msgs/msg/CameraInfo"
+#   gz_type_name: "gz.msgs.CameraInfo"
+#   direction: GZ_TO_ROS
+# - ros_topic_name: "/model/lance/left_cam/camera_info"
+#   gz_topic_name: "/model/lance/left_cam/camera_info"
+#   ros_type_name: "sensor_msgs/msg/CameraInfo"
+#   gz_type_name: "gz.msgs.CameraInfo"
+#   direction: GZ_TO_ROS
+- ros_topic_name: "/arena/cam1/camera_info"
+  gz_topic_name: "/arena/cam1/camera_info"
   ros_type_name: "sensor_msgs/msg/CameraInfo"
   gz_type_name: "gz.msgs.CameraInfo"
   direction: GZ_TO_ROS

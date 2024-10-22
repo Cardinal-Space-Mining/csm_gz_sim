@@ -85,9 +85,10 @@ def generate_launch_description():
         package='ros_gz_image',
         executable='image_bridge',
         arguments=[
-            '/model/lance/fwd_cam/image',
-            '/model/lance/rght_cam/image',
-            '/model/lance/left_cam/image'
+            # '/model/lance/fwd_cam/image',
+            # '/model/lance/rght_cam/image',
+            # '/model/lance/left_cam/image',
+            '/arena/cam1/image'
         ],
         output='screen'
     )

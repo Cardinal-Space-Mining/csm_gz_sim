@@ -114,13 +114,13 @@
           </geometry>
         </collision>
         <!-- starting zone + aruco -->
-        <visual name = "starting_visual">
+        <!-- <visual name = "starting_visual">
           <geometry>
             <mesh>
               <uri>./meshes/artemis-arena-starting-zone-2.dae</uri>
             </mesh>
           </geometry>
-        </visual>
+        </visual> -->
         <!-- <collision name = "starting_collision">
           <geometry>
             <mesh>
@@ -173,6 +173,46 @@
             <box><size>0.5 3 1</size></box>
           </geometry>
         </visual> -->
+        <sensor name='arena_cam1' type='camera'>
+          <pose>0 0 1.25 0 0 0.78539816339</pose>
+          <topic>/arena/cam1/image</topic>
+          <gz_frame_id>map</gz_frame_id>
+          <update_rate>5</update_rate>
+          <always_on>1</always_on>
+          <visualize>true</visualize>
+          <camera>
+            <camera_info_topic>/arena/cam1/camera_info</camera_info_topic>
+            <horizontal_fov>1.39626</horizontal_fov>
+            <image>
+              <width>3840</width>
+              <height>2160</height>
+              <format>R8G8B8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <clip>
+              <near>0.08</near>
+              <far>100.0</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.03</mean>
+              <stddev>0.1</stddev>
+            </noise>
+            <lens>
+              <type>gnomonical</type>
+              <scale_to_hfov>false</scale_to_hfov>
+              <cutoff_angle>1.5707</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+              <!-- <intrinsics>
+                <fx>2198.03832</fx>
+                <fy>2190.46488</fy>
+                <cx>1242.583652</cx>
+                <cy>719.725976</cy>
+                <s>0</s>
+              </intrinsics> -->
+            </lens>
+          </camera>
+        </sensor>
       </link>
     </model>
 
