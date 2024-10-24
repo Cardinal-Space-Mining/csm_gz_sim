@@ -1,4 +1,5 @@
 import os
+import random
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -63,9 +64,10 @@ def generate_launch_description():
         arguments=[
             '-name', 'lance',
             '-file', lance_model_path,
-            '-x', '1.0',
-            '-y', '1.0',
-            '-z', '0.0'
+            '-x', "{num}".format(num = random.random() * 0.1 + 1.0),
+            '-y', "{num}".format(num = random.random() * 0.1 + 1.0),
+            '-z', '0.0',
+            '-Y', "{num}".format(num = random.random() * 6.2831815)
         ],
         output='screen'
     )
