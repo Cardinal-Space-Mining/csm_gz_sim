@@ -177,15 +177,15 @@
           <pose>0 0 1.25 0 0 0.78539816339</pose>
           <topic>/arena/cam1/image</topic>
           <gz_frame_id>map</gz_frame_id>
-          <update_rate>5</update_rate>
+          <update_rate>10</update_rate>
           <always_on>1</always_on>
           <visualize>true</visualize>
           <camera>
             <camera_info_topic>/arena/cam1/camera_info</camera_info_topic>
             <horizontal_fov>1.39626</horizontal_fov>
             <image>
-              <width>3840</width>
-              <height>2160</height>
+              <width>1920</width>
+              <height>1080</height>
               <format>R8G8B8</format>
               <anti_aliasing>4</anti_aliasing>
             </image>
