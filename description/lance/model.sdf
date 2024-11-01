@@ -42,7 +42,6 @@
 					</mesh>
 				</geometry>
 			</visual>
-
 			<collision name = 'frame_collision'>
 				<geometry>
 					<mesh>
@@ -51,6 +50,23 @@
 					</mesh>
 				</geometry>
 			</collision>
+
+			<visual name = 'frame_push_plate_visual'>
+				<geometry>
+					<mesh>
+						<uri>./meshes/lance-2024-frame-push-plate.dae</uri>
+						<scale>1 1 1</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<visual name = 'frame_push_plate_collision'>
+				<geometry>
+					<mesh>
+						<uri>./meshes/lance-2024-frame-push-plate.dae</uri>
+						<scale>1 1 1</scale>
+					</mesh>
+				</geometry>
+			</visual>
 		</link>
 
 
@@ -166,6 +182,7 @@
 				<limit>
 					<upper>0.2617994</upper>
 					<lower>-0.2617994</lower>
+					<effort>1e6</effort>
 				</limit>
 			</axis>
 		</joint>
@@ -582,6 +599,15 @@
 			<max_velocity>3.0</max_velocity>
 			<min_acceleration>-5.0</min_acceleration>
 			<max_acceleration>5.0</max_acceleration>
+		</plugin>
+
+		<plugin
+			filename="gz-sim-joint-controller-system"
+			name="gz::sim::systems::JointController">
+			<joint_name>dump_joint</joint_name>
+			<use_force_commands>false</use_force_commands>
+			<use_actuator_msg>false</use_actuator_msg>
+			<topic>/model/lance/dump/cmd_vel</topic>
 		</plugin>
 
 		<!-- Moving Forward: W -->

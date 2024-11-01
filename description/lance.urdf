@@ -35,10 +35,20 @@
 				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame.dae" />
 			</geometry>
 		</visual>
-
 		<collision name = 'frame_collision'>
 			<geometry>
 				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame-collision.stl" />
+			</geometry>
+		</collision>
+
+		<visual name = 'frame_push_plate_visual'>
+			<geometry>
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame-push-plate.dae" />
+			</geometry>
+		</visual>
+		<collision name = 'frame_push_plate_collision'>
+			<geometry>
+				<mesh filename = "file://$(find csm_gz_sim)/description/lance/meshes/lance-2024-frame-push-plate.dae" />
 			</geometry>
 		</collision>
 	</link>

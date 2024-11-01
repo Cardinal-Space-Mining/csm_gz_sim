@@ -216,6 +216,57 @@
       </link>
     </model>
 
+    <model name = 'rock1'>
+      <static>false</static>
+      <pose>6 3.5 0.5 0 0 0</pose>
+      <link name = 'link'>
+        <inertial auto = 'true'>
+          <mass>10.0</mass>
+        </inertial>
+        <visual name = "rock1_visual">
+          <geometry>
+            <mesh>
+              <uri>./meshes/rock1.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name = "rock1_collision">
+          <geometry>
+              <mesh>
+                <uri>./meshes/rock1.dae</uri>
+                <scale>0.5 0.5 0.5</scale>
+              </mesh>
+            </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name = 'rock2'>
+      <static>false</static>
+      <pose>5.5 2.5 0.5 0 0 0</pose>
+      <link name = 'link'>
+        <inertial auto = 'true'>
+          <mass>20.0</mass>
+        </inertial>
+        <visual name = "rock2_visual">
+          <geometry>
+            <mesh>
+              <uri>./meshes/rock2.dae</uri>
+              <scale>0.3 0.3 0.3</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name = "rock2_collision">
+          <geometry>
+              <mesh>
+                <uri>./meshes/rock2.dae</uri>
+                <scale>0.3 0.3 0.3</scale>
+              </mesh>
+            </geometry>
+        </collision>
+      </link>
+    </model>
+
     <!-- <plugin filename="KeyPublisher" name="Key publisher">
         <gz-gui>
             <anchors target="3D View">

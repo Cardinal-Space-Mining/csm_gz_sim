@@ -31,8 +31,27 @@ def generate_launch_description():
         ],
         remappings = [('/cmd_vel', '/robot_cmd_vel')]
     )
+    # dump command driver
+    launch_dump_teleop = Node(
+        name = 'dump_axis_exporter',
+        package = 'csm_gz_sim',
+        executable = 'joy_axis_exporter',
+        output = 'screen',
+        parameters = [
+            {
+                'use_sim_time' : True,
+                'axis_num': 4,
+                'value_scalar' : -0.5
+            }
+        ],
+        remappings = [
+            ('joy', '/joy'),
+            ('joy_axis_value', '/dump_cmd_vel')
+        ]
+    )
 
     return LaunchDescription([
         launch_joy_pub,
-        launch_drive_teleop
+        launch_drive_teleop,
+        launch_dump_teleop
     ])
