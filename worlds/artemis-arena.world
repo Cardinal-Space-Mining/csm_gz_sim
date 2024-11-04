@@ -32,19 +32,51 @@
       name="gz::sim::systems::Imu">
     </plugin>
 
-    <light name="sun" type="directional">
+    <camera>
+      <name>camera1</name>
+      <pose>2 -3 2.5 0 0 1.57</pose>
+    </camera>
+
+    <light name="light1" type="point">
       <cast_shadows>true</cast_shadows>
-      <pose>0 0 10 0 0 0</pose>
+      <pose>0.0 3.5 3.7 0 0 0</pose>
       <diffuse>0.95 0.95 0.95 1</diffuse>
       <specular>0.5 0.5 0.5 1</specular>
+      <intensity>0.4</intensity>
       <attenuation>
-        <range>1000</range>
+        <range>10</range>
         <constant>0.9</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
-      <direction>0 0 -1</direction>
     </light>
+    <light name="light2" type="point">
+      <cast_shadows>true</cast_shadows>
+      <pose>1.2 0.3 3.7 0 0 0</pose>
+      <diffuse>0.95 0.95 0.95 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <intensity>0.6</intensity>
+      <attenuation>
+        <range>10</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+    <light name="light3" type="point">
+      <cast_shadows>true</cast_shadows>
+      <pose>6.0 2.5 3.7 0 0 0</pose>
+      <diffuse>0.95 0.95 0.95 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <intensity>0.4</intensity>
+      <attenuation>
+        <range>10</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
 
     <!-- <model name="ground_plane">
       <static>true</static>
@@ -93,6 +125,23 @@
                 <scale>1 1 1</scale>
               </mesh>
             </geometry>
+        </collision>
+        <!-- Env room -->
+        <visual name = "arena_env_visual">
+          <geometry>
+            <mesh>
+              <uri>./meshes/artemis-arena-env.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name = "arena_env_collision">
+          <geometry>
+            <mesh>
+              <uri>./meshes/artemis-arena-env.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
         </collision>
         <!-- Terrain -->
         <visual name = "terrain_visual">
@@ -221,7 +270,7 @@
       <pose>6 3.5 0.5 0 0 0</pose>
       <link name = 'link'>
         <inertial auto = 'true'>
-          <mass>10.0</mass>
+          <mass>15.0</mass>
         </inertial>
         <visual name = "rock1_visual">
           <geometry>
@@ -246,7 +295,7 @@
       <pose>5.5 2.5 0.5 0 0 0</pose>
       <link name = 'link'>
         <inertial auto = 'true'>
-          <mass>20.0</mass>
+          <mass>30.0</mass>
         </inertial>
         <visual name = "rock2_visual">
           <geometry>
@@ -261,6 +310,31 @@
               <mesh>
                 <uri>./meshes/rock2.dae</uri>
                 <scale>0.3 0.3 0.3</scale>
+              </mesh>
+            </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name = 'rock3'>
+      <static>false</static>
+      <pose>0.8 4.0 0.5 0 0 0</pose>
+      <link name = 'link'>
+        <inertial auto = 'true'>
+          <mass>25.0</mass>
+        </inertial>
+        <visual name = "rock3_visual">
+          <geometry>
+            <mesh>
+              <uri>./meshes/rock3.dae</uri>
+              <scale>0.2 0.2 0.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name = "rock3_collision">
+          <geometry>
+              <mesh>
+                <uri>./meshes/rock3.dae</uri>
+                <scale>0.2 0.2 0.2</scale>
               </mesh>
             </geometry>
         </collision>
