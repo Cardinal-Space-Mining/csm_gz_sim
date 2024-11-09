@@ -7,17 +7,8 @@
   <maintainer email="samrichter888@gmail.com">Sam Richter</maintainer>
   <license>TODO: License declaration</license>
 
-  <depend>rclcpp</depend>
-  <depend>sensor_msgs</depend>
-  <depend>std_msgs</depend>
-  <depend>ros_gz_bridge</depend>
-  <depend>ros_gz_image</depend>
-  <depend>ros_gz_sim</depend>
   <depend>robot_state_publisher</depend>
-  <depend>joy</depend>
-  <depend>teleop_twist_joy</depend>
   <depend>xacro</depend>
-  <depend>rviz2</depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
