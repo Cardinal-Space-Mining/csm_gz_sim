@@ -1,3 +1,5 @@
+# ⚠️ Simulator assets are now apart of [this repository](https://github.com/Cardinal-Space-Mining/csm-sim)! ⚠️
+
 # CSM Gazebo Simulator
 This repository contains a core ROS2 package used for simulating CSM robots.
 
